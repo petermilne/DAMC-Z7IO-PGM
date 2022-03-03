@@ -1,0 +1,21 @@
+#!/usr/bin/expect
+
+
+if { $::argc > 0 } {
+#        spawn $::argv
+	eval [list spawn -noecho] $::argv
+        while { 1 } {
+            expect {
+		"Username for*: " {
+			send "peter.milne@d-tacq.com\r"
+		}
+	    }
+	    expect {
+	        "Password for*: " {
+			send "retepEnl1mDESY\r"
+		}
+	    }
+	}
+} else {
+	puts "usage desy-clone PRJ1..PRJ2"
+}

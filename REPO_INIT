@@ -1,0 +1,10 @@
+
+
+PREFIX=https://msktechvcs.desy.de/external
+
+repo init \
+	-u $PREFIX/damc-fmc1z7io-users/yocto-manifests/damc-fmc1z7io-yocto-manifests.git \
+        -b rel-v2020.2 \
+        -m techlab-intern.xml
+
+
