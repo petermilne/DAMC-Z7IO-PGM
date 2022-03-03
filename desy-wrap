@@ -9,10 +9,16 @@ if { $::argc > 0 } {
 		"Username for*: " {
 			send "peter.milne@d-tacq.com\r"
 		}
+                eof {
+			exit 0
+		}
 	    }
 	    expect {
 	        "Password for*: " {
 			send "retepEnl1mDESY\r"
+		}
+ 	 	eof {
+			exit 0
 		}
 	    }
 	}
