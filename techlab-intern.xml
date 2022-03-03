@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="xilinx"  fetch="git://github.com/xilinx"/>
-  <remote name="msktechvcs"  fetch="ssh://git@msktechvcs.desy.de/techlab/damc-fmc1z7io/software/"/>
+  <!--
+	  <remote name="msktechvcs"  fetch="ssh://git@msktechvcs.desy.de/techlab/damc-fmc1z7io/software/"/>
   <remote name="msktechvcs-sw"  fetch="ssh://git@msktechvcs.desy.de/techlab/software/yocto-layers/"/>
+  -->
+  <remote name="msktechvcs"    fetch="https://msktechvcs.desy.de/external/damc-fmc1z7io-users/software/">
 
   <default sync-j="4"/>
 
@@ -24,8 +27,8 @@
   <project remote="xilinx"  revision="rel-v2020.2"      name="meta-jupyter"             path="sources/meta-jupyter"/>
   <project remote="xilinx"  revision="rel-v2020.2"      name="meta-vitis-ai"            path="sources/meta-vitis-ai"/>
 
-  <project remote="msktechvcs"  revision="rel-v2020.2"  name="meta-damc-fmc1z7io"       path="sources/meta-damc-fmc1z7io"/>
+  <project remote="msktechvcs"  revision="rel-v2020.2"  name="meta-damc-fmc1z7io"       path="meta-damc-fmc1z7io"/>
 
-  <project remote="msktechvcs-sw" revision="rel-v2020.2" name="meta-techlab-utils"       path="sources/meta-techlab-utils"/>
+  <project remote="msktechvcs" revision="rel-v2020.2" name="meta-techlab-utils"       path="meta-techlab-utils"/>
 
 </manifest>
