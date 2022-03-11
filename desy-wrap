@@ -1,5 +1,7 @@
 #!/usr/bin/expect
 
+# creds is a secret file defines USER and PASS
+source creds
 
 if { $::argc > 0 } {
 #        spawn $::argv
@@ -7,7 +9,7 @@ if { $::argc > 0 } {
         while { 1 } {
             expect {
 		"Username for*: " {
-			send "peter.milne@d-tacq.com\r"
+			send "$USER\r"
 		}
                 eof {
 			exit 0
@@ -15,7 +17,7 @@ if { $::argc > 0 } {
 	    }
 	    expect {
 	        "Password for*: " {
-			send "retepEnl1mDESY\r"
+			send "$PASS\r"
 		}
  	 	eof {
 			exit 0
