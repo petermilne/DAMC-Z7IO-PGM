@@ -1,0 +1,12 @@
+Attempting Yocto from Xilinx and DESY
+
+./desy-wrap ./REPO_INIT
+./dest-wrap repo sync
+
+Runs for a while, then hangs:
+[pgm@hoy5 DAMC-Z7IO-PGM]$ rm -Rf .repo^C
+[pgm@hoy5 DAMC-Z7IO-PGM]$ ./desy-wrap repo sync
+Username for 'https://msktechvcs.desy.de': peter.milne@d-tacq.com
+Password for 'https://peter.milne@d-tacq.com@msktechvcs.desy.de': 
+Fetching: 55% (10/18) meta-browser
+
